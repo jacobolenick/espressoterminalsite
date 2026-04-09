@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download — Espresso Terminal</title>
+    <!--
+      Stripe Dashboard → Payment links → your link → Confirmation page →
+      "Don't show confirmation page" OFF, then choose "Redirect customers to your website"
+      and set the URL to:  https://YOUR-SITE-DOMAIN/after-payment.html
+      (use your real domain, e.g. https://espressoterminal.vercel.app/after-payment.html)
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="site.css" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" aria-label="Espresso Terminal">
+          <img
+            class="brand__mark"
+            src="images/espresso-mark.png"
+            width="32"
+            height="32"
+            alt=""
+            decoding="async"
+          />
+          <span class="wordmark-text">
+            <span class="wordmark-text__espresso">Espresso</span>
+            <span class="wordmark-text__terminal">Terminal</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="download-main">
+      <div class="download-card">
+        <h1 class="download-title">Thanks for your purchase</h1>
+        <p class="download-status" id="downloadStatus">
+          Starting your download… If nothing happens, use the button below.
+        </p>
+        <a
+          class="btn btn--primary download-btn"
+          id="manual-dl"
+          href="releases/espresso-mac.dmg"
+          download="espresso-mac.dmg"
+          >Download Espresso Terminal (.dmg)</a
+        >
+        <p class="download-foot">
+          <a class="bento__inline-link" href="index.html">← Back to home</a>
+        </p>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        var url = 'releases/espresso-mac.dmg';
+        window.location.href = url;
+      })();
+    </script>
+  </body>
+</html>
