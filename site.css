@@ -220,19 +220,30 @@ body {
   background: color-mix(in srgb, var(--text) 4%, transparent);
 }
 
-/* Preview + tabs */
-.hero-preview {
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--surface);
+/* Hero: landscape background + rounded app screenshot overlay */
+.hero-visual {
+  border-radius: 24px;
+  padding: clamp(1.25rem, 3.5vw, 2.5rem);
+  background-color: #c8c4bc;
+  background-image: url('images/hero-landscape-bg.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.14);
   overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06), 0 0 0 1px var(--line);
 }
 
 @media (prefers-color-scheme: dark) {
-  .hero-preview {
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--line);
+  .hero-visual {
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
   }
+}
+
+.hero-preview {
+  border: none;
+  background: transparent;
+  overflow: visible;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .icon {
@@ -251,8 +262,21 @@ body {
   display: flex;
   gap: 0;
   padding: 0 0.5rem;
-  border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--bg) 70%, var(--surface));
+  margin-bottom: 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-preview__tabs {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(22, 22, 24, 0.62);
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .hero-preview__tab {
@@ -301,16 +325,31 @@ body {
   position: absolute;
   left: 0.75rem;
   right: 0.75rem;
-  bottom: 0;
+  bottom: 0.35rem;
   height: 2px;
   background: var(--text);
-  border-radius: 1px 1px 0 0;
+  border-radius: 1px;
 }
 
 .hero-preview__frame {
   position: relative;
   line-height: 0;
-  background: var(--surface);
+  background: #141416;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 20px 56px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-preview__frame {
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow:
+      0 24px 64px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .hero-preview__panel {
@@ -326,6 +365,7 @@ body {
   width: 100%;
   height: auto;
   vertical-align: middle;
+  border-radius: inherit;
 }
 
 /* Bento */

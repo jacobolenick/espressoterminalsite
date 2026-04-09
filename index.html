@@ -6,7 +6,7 @@
     <title>Espresso Terminal — Mac</title>
     <meta
       name="description"
-      content="Espresso Terminal for Mac. A real shell, tabs, and shortcuts—without the intimidation."
+      content="Espresso Terminal for Mac. Real shell (bash or zsh), tabs, and plain-language shortcuts—without the intimidation."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,8 @@
         <div class="hero__intro">
           <h1 class="hero__headline">Terminal, without the intimidation.</h1>
           <p class="hero__sub">
-            Native Mac app. Real shell, tabs, plain-language shortcuts.
+            Native Mac app. Choose bash or zsh (or your login shell), tabs, and
+            plain-language shortcuts.
           </p>
           <a
             class="btn btn--primary"
@@ -57,105 +58,107 @@
           >
         </div>
 
-        <div class="hero-preview" id="preview">
-          <div
-            class="hero-preview__tabs"
-            role="tablist"
-            aria-label="Interface preview"
-          >
-            <button
-              type="button"
-              class="hero-preview__tab"
-              role="tab"
-              id="tab-dark"
-              aria-selected="true"
-              aria-controls="panel-dark"
-              data-panel="dark"
-            >
-              <span class="hero-preview__tab-inner">
-                <svg
-                  class="icon icon--sm"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                  />
-                </svg>
-                Dark version
-              </span>
-            </button>
-            <button
-              type="button"
-              class="hero-preview__tab"
-              role="tab"
-              id="tab-light"
-              aria-selected="false"
-              aria-controls="panel-light"
-              data-panel="light"
-            >
-              <span class="hero-preview__tab-inner">
-                <svg
-                  class="icon icon--sm"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  />
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
-                  />
-                </svg>
-                Light version
-              </span>
-            </button>
-          </div>
-          <div class="hero-preview__frame">
+        <div class="hero-visual" id="preview">
+          <div class="hero-preview">
             <div
-              class="hero-preview__panel"
-              id="panel-dark"
-              role="tabpanel"
-              aria-labelledby="tab-dark"
-              data-panel="dark"
+              class="hero-preview__tabs"
+              role="tablist"
+              aria-label="Interface preview"
             >
-              <img
-                class="hero-preview__img"
-                src="images/hero-dark.png"
-                width="1024"
-                height="792"
-                alt="Espresso Terminal in dark mode."
-              />
+              <button
+                type="button"
+                class="hero-preview__tab"
+                role="tab"
+                id="tab-dark"
+                aria-selected="true"
+                aria-controls="panel-dark"
+                data-panel="dark"
+              >
+                <span class="hero-preview__tab-inner">
+                  <svg
+                    class="icon icon--sm"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                    />
+                  </svg>
+                  Dark version
+                </span>
+              </button>
+              <button
+                type="button"
+                class="hero-preview__tab"
+                role="tab"
+                id="tab-light"
+                aria-selected="false"
+                aria-controls="panel-light"
+                data-panel="light"
+              >
+                <span class="hero-preview__tab-inner">
+                  <svg
+                    class="icon icon--sm"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+                    />
+                  </svg>
+                  Light version
+                </span>
+              </button>
             </div>
-            <div
-              class="hero-preview__panel hero-preview__panel--hidden"
-              id="panel-light"
-              role="tabpanel"
-              aria-labelledby="tab-light"
-              data-panel="light"
-              hidden
-            >
-              <img
-                class="hero-preview__img"
-                src="images/hero-light.png"
-                width="1024"
-                height="792"
-                alt="Espresso Terminal in light mode."
-              />
+            <div class="hero-preview__frame">
+              <div
+                class="hero-preview__panel"
+                id="panel-dark"
+                role="tabpanel"
+                aria-labelledby="tab-dark"
+                data-panel="dark"
+              >
+                <img
+                  class="hero-preview__img"
+                  src="images/hero-dark.png"
+                  width="2360"
+                  height="1520"
+                  alt="Espresso Terminal in dark mode, with shell picker in the sidebar."
+                />
+              </div>
+              <div
+                class="hero-preview__panel hero-preview__panel--hidden"
+                id="panel-light"
+                role="tabpanel"
+                aria-labelledby="tab-light"
+                data-panel="light"
+                hidden
+              >
+                <img
+                  class="hero-preview__img"
+                  src="images/hero-light.png"
+                  width="2360"
+                  height="1520"
+                  alt="Espresso Terminal in light mode, with shell picker in the sidebar."
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -184,7 +187,8 @@
             </div>
             <h3 class="bento__card-title">Real shell</h3>
             <p class="bento__card-text">
-              zsh on your machine—local, fast, and familiar.
+              Pick bash, zsh, or your system login shell from the sidebar—local,
+              fast, and familiar.
             </p>
           </article>
           <article class="bento__card bento__card--span-4">
