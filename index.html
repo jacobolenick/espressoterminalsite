@@ -6,7 +6,7 @@
     <title>Espresso Terminal — Mac</title>
     <meta
       name="description"
-      content="Espresso Terminal for Mac — real shell (bash or zsh), tabs, and plain-language shortcuts—without the intimidation."
+      content="Espresso Terminal for Mac — real shell, tabs, plain language to commands, and optional on-device Apple Intelligence—without the intimidation."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +37,7 @@
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary">
-          <a href="#download">Download</a>
+          <a href="#pricing">Buy</a>
         </nav>
       </div>
     </header>
@@ -48,14 +48,36 @@
           <h1 class="hero__headline">Terminal, without the intimidation.</h1>
           <p class="hero__sub">
             Native Mac app. Choose bash or zsh (or your login shell), tabs, and
-            plain-language shortcuts.
+            a plain-language bar that turns everyday wording into shell
+            commands.
           </p>
-          <a
-            class="btn btn--primary"
-            href="releases/espresso-mac.dmg"
-            download="EspressoTerminal-mac.dmg"
-            >Download for Mac</a
-          >
+          <div class="hero__ai" aria-label="Apple Intelligence">
+            <p class="hero__ai-label">Apple Intelligence</p>
+            <p class="hero__ai-text">
+              <strong>Optional on-device Apple Intelligence</strong> can suggest
+              commands after you opt in—supported Macs and OS versions only.
+              Offline hints are always there too; your phrasing stays on this
+              Mac.
+            </p>
+          </div>
+          <div id="pricing" class="hero__price">
+            <span class="hero__price-amount">$4.99</span>
+            <span class="hero__price-note">one-time · pay securely with Stripe</span>
+          </div>
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              data-stripe-checkout
+              href="https://buy.stripe.com/00waEWgrl0plfdZdHW6wE03"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download for Your Mac</a
+            >
+          </div>
+          <p class="hero__purchase-hint">
+            After payment, Stripe sends you to the download page to grab the Mac
+            .dmg—no separate download button here.
+          </p>
         </div>
 
         <div class="hero-visual" id="preview">
@@ -140,7 +162,7 @@
                   src="images/hero-dark.png"
                   width="2360"
                   height="1520"
-                  alt="Espresso Terminal in dark mode, with shell picker in the sidebar."
+                  alt="Espresso Terminal in dark mode with sidebar: Plain language, Apple Intelligence, and shell options."
                 />
               </div>
               <div
@@ -156,7 +178,7 @@
                   src="images/hero-light.png"
                   width="2360"
                   height="1520"
-                  alt="Espresso Terminal in light mode, with shell picker in the sidebar."
+                  alt="Espresso Terminal in light mode with sidebar: Plain language, Apple Intelligence, and shell options."
                 />
               </div>
             </div>
@@ -223,9 +245,28 @@
                 />
               </svg>
             </div>
-            <h3 class="bento__card-title">Shortcuts</h3>
+            <h3 class="bento__card-title">Plain language</h3>
             <p class="bento__card-text">
-              Plain-language actions paste the command—learn at your pace.
+              Describe a task in normal words; get one command to review before
+              you run it. Built-in offline patterns cover common requests.
+            </p>
+          </article>
+          <article class="bento__card bento__card--span-12 bento__card--accent">
+            <div class="bento__card-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 21h8M12 17v4M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10H4V5z"
+                />
+              </svg>
+            </div>
+            <h3 class="bento__card-title">System look &amp; feel</h3>
+            <p class="bento__card-text">
+              Light and dark appearances follow macOS. No webview cosplay.
             </p>
           </article>
           <article class="bento__card bento__card--dock bento__card--span-7">
@@ -259,22 +300,35 @@
               />
             </div>
           </article>
-          <article class="bento__card bento__card--span-5 bento__card--accent">
+          <article class="bento__card bento__card--span-5 bento__card--accent bento__card--ai">
             <div class="bento__card-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24">
+              <svg class="icon icon--ai" viewBox="0 0 24 24">
+                <rect
+                  x="5"
+                  y="8"
+                  width="14"
+                  height="11"
+                  rx="2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
                 <path
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.5"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8 21h8M12 17v4M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10H4V5z"
+                  d="M12 5v3M10 16h4"
                 />
+                <circle cx="9" cy="12" r="1" fill="currentColor" />
+                <circle cx="15" cy="12" r="1" fill="currentColor" />
               </svg>
             </div>
-            <h3 class="bento__card-title">System look &amp; feel</h3>
+            <h3 class="bento__card-title">Apple Intelligence</h3>
             <p class="bento__card-text">
-              Light and dark appearances follow macOS. No webview cosplay.
+              On supported Macs, opt in for <strong>on-device Apple Intelligence</strong>
+              to suggest richer commands from how you phrase things—no Espresso
+              server; processing stays local when the feature is available.
             </p>
           </article>
           <article class="bento__card bento__card--span-12 bento__card--cta" id="download">
@@ -309,10 +363,13 @@
                       />
                     </svg>
                   </div>
-                  <h3 class="bento__card-title bento__cta-title">Download</h3>
+                  <h3 class="bento__card-title bento__cta-title">Get the app</h3>
                 </div>
                 <p class="bento__card-text bento__card-text--dim">
-                  macOS 11+ · Drag the app to <strong>Applications</strong>.
+                  <span class="bento__price-tag">$4.99</span> one-time via
+                  Stripe. After checkout you’re sent to the download page to
+                  grab the Mac .dmg. macOS 11+ · Drag the app to
+                  <strong>Applications</strong>.
                   Apple may say it can’t check the app for malware—that’s
                   <strong>Gatekeeper</strong> when a download isn’t
                   <strong>notarized</strong> yet. It doesn’t mean Apple found
@@ -325,7 +382,10 @@
                   <strong>Control-click</strong> the app → <strong>Open</strong>
                   → <strong>Open</strong> again, or use
                   <strong>System Settings → Privacy &amp; Security</strong> →
-                  <strong>Open Anyway</strong>.
+                  <strong>Open Anyway</strong>. After the app opens, enable
+                  <strong>Apple Intelligence</strong> in the sidebar if you want
+                  on-device command suggestions (supported hardware and OS
+                  only).
                 </p>
                 <p class="bento__card-text bento__card-text--dim bento__card-text--link">
                   <a
@@ -346,12 +406,16 @@
                   >
                 </p>
               </div>
-              <a
-                class="btn btn--secondary bento__cta-btn"
-                href="releases/espresso-mac.dmg"
-                download="EspressoTerminal-mac.dmg"
-                >Download .dmg</a
-              >
+              <div class="bento__cta-actions">
+                <a
+                  class="btn btn--primary bento__cta-btn"
+                  data-stripe-checkout
+                  href="https://buy.stripe.com/00waEWgrl0plfdZdHW6wE03"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Download for Your Mac</a
+                >
+              </div>
             </div>
           </article>
         </div>
@@ -386,6 +450,8 @@
       </div>
     </footer>
 
+    <script src="stripe-config.js"></script>
+    <script src="stripe-checkout.js"></script>
     <script>
       (function () {
         var tabs = document.querySelectorAll('.hero-preview__tab');

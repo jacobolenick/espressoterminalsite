@@ -139,6 +139,12 @@ body {
   gap: 0.55rem;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
 .site-nav a {
   font-size: 0.875rem;
   font-weight: 500;
@@ -171,10 +177,39 @@ body {
 }
 
 .hero__sub {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
   font-size: 1.0625rem;
   color: var(--text-dim);
   line-height: 1.45;
+}
+
+.hero__ai {
+  margin: 0 0 1.25rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--line-strong);
+  background: color-mix(in srgb, var(--text) 3%, var(--surface));
+}
+
+.hero__ai-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero__ai-text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+
+.hero__ai-text strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .hero__price {
@@ -195,6 +230,25 @@ body {
 .hero__price-note {
   font-size: 0.875rem;
   font-weight: 500;
+  color: var(--text-muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero__actions .btn {
+  min-width: 12.5rem;
+}
+
+.hero__purchase-hint {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
   color: var(--text-muted);
 }
 
@@ -526,12 +580,20 @@ button.btn:disabled {
 }
 
 @media (min-width: 768px) {
+  .bento__card--span-3 {
+    grid-column: span 3;
+  }
+
   .bento__card--span-4 {
     grid-column: span 4;
   }
 
   .bento__card--span-5 {
     grid-column: span 5;
+  }
+
+  .bento__card--span-6 {
+    grid-column: span 6;
   }
 
   .bento__card--span-7 {
@@ -606,6 +668,21 @@ button.btn:disabled {
   flex-shrink: 0;
 }
 
+.bento__cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  align-items: stretch;
+  min-width: 11rem;
+}
+
+@media (min-width: 640px) {
+  .bento__cta-actions {
+    align-items: flex-end;
+  }
+}
+
 .bento__card-text--link {
   margin-top: 0.65rem;
 }
@@ -666,6 +743,9 @@ button.btn:disabled {
   border-radius: 16px;
   border: 1px solid var(--line);
   background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .download-title {
@@ -696,6 +776,11 @@ button.btn:disabled {
 }
 
 .download-btn {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.download-card > .download-btn:last-of-type {
   margin-bottom: 1.25rem;
 }
 
