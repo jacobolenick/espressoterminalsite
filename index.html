@@ -333,6 +333,11 @@
                   <strong>System Settings → Privacy &amp; Security</strong> →
                   <strong>Open Anyway</strong>.
                 </p>
+                <p
+                  class="bento__stripe-redirect-hint"
+                  id="stripeRedirectHint"
+                  hidden
+                ></p>
                 <p class="bento__card-text bento__card-text--dim bento__card-text--link">
                   <a
                     class="bento__inline-link"
@@ -392,6 +397,18 @@
       </div>
     </footer>
 
+    <script src="site-paths.js"></script>
+    <script>
+      (function () {
+        var hint = document.getElementById('stripeRedirectHint');
+        if (hint && typeof window.siteResolveUrl === 'function') {
+          var redirect = window.siteResolveUrl('after-payment.html');
+          hint.textContent =
+            'Stripe → Payment link → After payment: redirect to ' + redirect;
+          hint.hidden = false;
+        }
+      })();
+    </script>
     <script>
       (function () {
         var tabs = document.querySelectorAll('.hero-preview__tab');

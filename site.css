@@ -703,3 +703,38 @@ button.btn:disabled {
   margin: 0;
   font-size: 0.875rem;
 }
+
+.download-help {
+  margin: 1.25rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.download-help__url {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.65rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  word-break: break-all;
+  color: var(--text);
+  background: color-mix(in srgb, var(--text) 5%, transparent);
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.download-copy {
+  margin-top: 0.65rem;
+  font-size: 0.8125rem;
+}
+
+.bento__stripe-redirect-hint {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  word-break: break-all;
+}
