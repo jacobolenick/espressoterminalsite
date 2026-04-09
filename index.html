@@ -72,7 +72,23 @@
               aria-controls="panel-dark"
               data-panel="dark"
             >
-              Dark version
+              <span class="hero-preview__tab-inner">
+                <svg
+                  class="icon icon--sm"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  />
+                </svg>
+                Dark version
+              </span>
             </button>
             <button
               type="button"
@@ -83,7 +99,30 @@
               aria-controls="panel-light"
               data-panel="light"
             >
-              Light version
+              <span class="hero-preview__tab-inner">
+                <svg
+                  class="icon icon--sm"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+                  />
+                </svg>
+                Light version
+              </span>
             </button>
           </div>
           <div class="hero-preview__frame">
@@ -131,12 +170,36 @@
         </div>
         <div class="bento__grid">
           <article class="bento__card bento__card--span-4">
+            <div class="bento__card-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 17l6-6-6-6M12 19h8"
+                />
+              </svg>
+            </div>
             <h3 class="bento__card-title">Real shell</h3>
             <p class="bento__card-text">
               zsh on your machine—local, fast, and familiar.
             </p>
           </article>
           <article class="bento__card bento__card--span-4">
+            <div class="bento__card-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"
+                />
+              </svg>
+            </div>
             <h3 class="bento__card-title">Tabs</h3>
             <p class="bento__card-text">
               Several sessions in one window. Open, close, switch like a
@@ -144,6 +207,18 @@
             </p>
           </article>
           <article class="bento__card bento__card--span-4">
+            <div class="bento__card-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                />
+              </svg>
+            </div>
             <h3 class="bento__card-title">Shortcuts</h3>
             <p class="bento__card-text">
               Plain-language actions paste the command—learn at your pace.
@@ -151,7 +226,21 @@
           </article>
           <article class="bento__card bento__card--dock bento__card--span-7">
             <div class="bento__dock-copy">
-              <h3 class="bento__card-title">On your Dock</h3>
+              <div class="bento__dock-heading">
+                <div class="bento__card-icon bento__card-icon--sm" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 19h14M7 10h2.5v7H7zM11.25 10H14v7h-2.75zM16.5 10H19v7h-2.5z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="bento__card-title bento__card-title--dock">On your Dock</h3>
+              </div>
               <p class="bento__card-text bento__card-text--dim">
                 Native Mac app—keep it next to the tools you already use.
               </p>
@@ -167,6 +256,18 @@
             </div>
           </article>
           <article class="bento__card bento__card--span-5 bento__card--accent">
+            <div class="bento__card-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 21h8M12 17v4M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10H4V5z"
+                />
+              </svg>
+            </div>
             <h3 class="bento__card-title">System look &amp; feel</h3>
             <p class="bento__card-text">
               Light and dark appearances follow macOS. No webview cosplay.
@@ -175,23 +276,69 @@
           <article class="bento__card bento__card--span-12 bento__card--cta" id="download">
             <div class="bento__cta-inner">
               <div class="bento__cta-copy">
-                <h3 class="bento__card-title bento__cta-title">Download</h3>
+                <div class="bento__cta-heading">
+                  <div class="bento__card-icon bento__card-icon--sm" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24">
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4v11"
+                      />
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m7 10 5 5 5-5"
+                      />
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 20h14a2 2 0 0 0 2-2v-3"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="bento__card-title bento__cta-title">Download</h3>
+                </div>
                 <p class="bento__card-text bento__card-text--dim">
-                  macOS 11+ · Drag the app to Applications. This build is not
-                  Apple-notarized yet, so you may see a security notice. To open:
+                  macOS 11+ · Drag the app to <strong>Applications</strong>.
+                  Apple may say it can’t check the app for malware—that’s
+                  <strong>Gatekeeper</strong> when a download isn’t
+                  <strong>notarized</strong> yet. It doesn’t mean Apple found
+                  malware; notarization requires a paid developer account and an
+                  Apple scan of each release. <strong>Notarized</strong> builds
+                  open normally; this file is updated when we publish one.
+                </p>
+                <p class="bento__card-text bento__card-text--dim">
+                  <strong>If you see that prompt:</strong>
                   <strong>Control-click</strong> the app → <strong>Open</strong>
-                  → Open again, or open
-                  <strong>System Settings → Privacy &amp; Security</strong> and
-                  choose <strong>Open Anyway</strong> under the blocked-app
-                  message.
+                  → <strong>Open</strong> again, or use
+                  <strong>System Settings → Privacy &amp; Security</strong> →
+                  <strong>Open Anyway</strong>.
                 </p>
                 <p class="bento__card-text bento__card-text--dim bento__card-text--link">
+                  <a
+                    class="bento__inline-link"
+                    href="https://support.apple.com/102445"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Apple: If you can’t open an app because it can’t be checked
+                    for malicious software</a
+                  >
+                  ·
                   <a
                     class="bento__inline-link"
                     href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mchlp4910064/mac"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Apple: Open an app from an unidentified developer</a
+                    >Open an app from an unidentified developer</a
                   >
                 </p>
               </div>

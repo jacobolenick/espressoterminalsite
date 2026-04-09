@@ -235,6 +235,18 @@ body {
   }
 }
 
+.icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  color: inherit;
+}
+
+.icon--sm {
+  width: 16px;
+  height: 16px;
+}
+
 .hero-preview__tabs {
   display: flex;
   gap: 0;
@@ -245,6 +257,8 @@ body {
 
 .hero-preview__tab {
   position: relative;
+  display: inline-flex;
+  align-items: center;
   padding: 0.75rem 1rem;
   margin: 0;
   border: none;
@@ -255,6 +269,23 @@ body {
   color: var(--text-muted);
   cursor: pointer;
   transition: color 0.12s ease;
+}
+
+.hero-preview__tab-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-preview__tab .icon {
+  opacity: 0.65;
+  flex-shrink: 0;
+  transition: opacity 0.12s ease;
+}
+
+.hero-preview__tab:hover .icon,
+.hero-preview__tab[aria-selected='true'] .icon {
+  opacity: 1;
 }
 
 .hero-preview__tab:hover {
@@ -344,12 +375,66 @@ body {
   background: var(--surface);
 }
 
+.bento__card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.85rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--text) 5%, transparent);
+  color: var(--text-dim);
+}
+
+.bento__card-icon .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.bento__card-icon--sm {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.bento__card-icon--sm .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.bento__dock-heading,
+.bento__cta-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.bento__card-title--dock {
+  margin-bottom: 0;
+}
+
+.bento__cta-heading .bento__cta-title {
+  margin-bottom: 0;
+}
+
 .bento__card-title {
   margin: 0 0 0.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text);
+}
+
+.bento__dock-heading + .bento__card-text,
+.bento__cta-heading + .bento__card-text {
+  margin-top: 0;
+}
+
+.bento__cta-copy .bento__card-text + .bento__card-text {
+  margin-top: 0.65rem;
 }
 
 .bento__card-text {
@@ -437,7 +522,7 @@ body {
 }
 
 .bento__cta-title {
-  margin-bottom: 0.35rem;
+  margin: 0;
   font-size: 1.0625rem;
 }
 
