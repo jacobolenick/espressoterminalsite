@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download — Espresso Terminal</title>
-    <!--
-      Stripe → Payment links → your link → After payment → redirect URL (HTTPS, exact match), e.g.:
-        https://espressoterminal.netlify.app/after-payment.html
-      GitHub Pages project site: include repo path, e.g. https://user.github.io/repo/after-payment.html
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,30 +39,17 @@
 
     <main id="main" class="download-main">
       <div class="download-card">
-        <h1 class="download-title">Thanks for your purchase</h1>
+        <h1 class="download-title">Download</h1>
         <p class="download-status" id="downloadStatus">
           Starting your download… If nothing happens, use the button below.
         </p>
         <a
           class="btn btn--primary download-btn"
           id="manual-dl"
-          href="#"
-          download="espresso-mac.dmg"
+          href="releases/espresso-mac.dmg"
+          download="EspressoTerminal-mac.dmg"
           >Download Espresso Terminal (.dmg)</a
         >
-        <p class="download-help" id="stripeHelp">
-          <strong>Payment went through but you weren’t sent here?</strong> In
-          <a
-            href="https://dashboard.stripe.com/payment-links"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Stripe → Payment links</a
-          >, edit your link → <strong>After payment</strong> → set redirect to
-          <span class="download-help__url" id="redirectUrlDisplay"></span>
-          <button type="button" class="btn btn--secondary download-copy" id="copyRedirectUrl">
-            Copy that URL
-          </button>
-        </p>
         <p class="download-foot">
           <a class="bento__inline-link" href="index.html">← Back to home</a>
         </p>
@@ -78,35 +60,8 @@
     <script>
       (function () {
         var dmgUrl = window.siteResolveUrl('releases/espresso-mac.dmg');
-        var here = window.location.href.split('#')[0];
         var manual = document.getElementById('manual-dl');
-        var display = document.getElementById('redirectUrlDisplay');
-        var copyBtn = document.getElementById('copyRedirectUrl');
-
         if (manual) manual.href = dmgUrl;
-        if (display) display.textContent = here;
-
-        if (copyBtn) {
-          copyBtn.addEventListener('click', function () {
-            var url = here;
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              navigator.clipboard.writeText(url).then(
-                function () {
-                  copyBtn.textContent = 'Copied';
-                  setTimeout(function () {
-                    copyBtn.textContent = 'Copy that URL';
-                  }, 2000);
-                },
-                function () {
-                  prompt('Copy this URL into Stripe → Payment link → After payment:', url);
-                }
-              );
-            } else {
-              prompt('Copy this URL into Stripe → Payment link → After payment:', url);
-            }
-          });
-        }
-
         window.location.replace(dmgUrl);
       })();
     </script>

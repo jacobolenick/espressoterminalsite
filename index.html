@@ -6,7 +6,7 @@
     <title>Espresso Terminal — Mac</title>
     <meta
       name="description"
-      content="Espresso Terminal for Mac — $9.99. Real shell (bash or zsh), tabs, and plain-language shortcuts—without the intimidation."
+      content="Espresso Terminal for Mac — real shell (bash or zsh), tabs, and plain-language shortcuts—without the intimidation."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +37,7 @@
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary">
-          <a href="#download">Purchase</a>
+          <a href="#download">Download</a>
         </nav>
       </div>
     </header>
@@ -50,15 +50,11 @@
             Native Mac app. Choose bash or zsh (or your login shell), tabs, and
             plain-language shortcuts.
           </p>
-          <p class="hero__price" aria-label="Price: 9 dollars 99 cents, one-time purchase">
-            <span class="hero__price-amount">$9.99</span>
-            <span class="hero__price-note">one-time purchase</span>
-          </p>
           <a
             class="btn btn--primary"
-            href="https://buy.stripe.com/14AaEW2Avegbc1N8nC6wE01"
-            rel="noopener noreferrer"
-            >Purchase &amp; download for Mac</a
+            href="releases/espresso-mac.dmg"
+            download="EspressoTerminal-mac.dmg"
+            >Download for Mac</a
           >
         </div>
 
@@ -313,12 +309,10 @@
                       />
                     </svg>
                   </div>
-                  <h3 class="bento__card-title bento__cta-title">Purchase</h3>
+                  <h3 class="bento__card-title bento__cta-title">Download</h3>
                 </div>
                 <p class="bento__card-text bento__card-text--dim">
-                  <strong class="bento__price-tag">$9.99</strong> one-time · Purchase
-                  unlocks the download. macOS 11+ · Drag the app to
-                  <strong>Applications</strong>.
+                  macOS 11+ · Drag the app to <strong>Applications</strong>.
                   Apple may say it can’t check the app for malware—that’s
                   <strong>Gatekeeper</strong> when a download isn’t
                   <strong>notarized</strong> yet. It doesn’t mean Apple found
@@ -333,11 +327,6 @@
                   <strong>System Settings → Privacy &amp; Security</strong> →
                   <strong>Open Anyway</strong>.
                 </p>
-                <p
-                  class="bento__stripe-redirect-hint"
-                  id="stripeRedirectHint"
-                  hidden
-                ></p>
                 <p class="bento__card-text bento__card-text--dim bento__card-text--link">
                   <a
                     class="bento__inline-link"
@@ -359,9 +348,9 @@
               </div>
               <a
                 class="btn btn--secondary bento__cta-btn"
-                href="https://buy.stripe.com/14AaEW2Avegbc1N8nC6wE01"
-                rel="noopener noreferrer"
-                >Purchase .dmg — $9.99</a
+                href="releases/espresso-mac.dmg"
+                download="EspressoTerminal-mac.dmg"
+                >Download .dmg</a
               >
             </div>
           </article>
@@ -397,18 +386,6 @@
       </div>
     </footer>
 
-    <script src="site-paths.js"></script>
-    <script>
-      (function () {
-        var hint = document.getElementById('stripeRedirectHint');
-        if (hint && typeof window.siteResolveUrl === 'function') {
-          var redirect = window.siteResolveUrl('after-payment.html');
-          hint.textContent =
-            'Stripe → Payment link → After payment: redirect to ' + redirect;
-          hint.hidden = false;
-        }
-      })();
-    </script>
     <script>
       (function () {
         var tabs = document.querySelectorAll('.hero-preview__tab');

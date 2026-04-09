@@ -730,11 +730,3 @@ button.btn:disabled {
   margin-top: 0.65rem;
   font-size: 0.8125rem;
 }
-
-.bento__stripe-redirect-hint {
-  margin: 0.75rem 0 0;
-  font-size: 0.75rem;
-  line-height: 1.45;
-  color: var(--text-muted);
-  word-break: break-all;
-}
