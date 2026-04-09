@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espresso Terminal — Mac</title>
+    <meta
+      name="description"
+      content="Espresso Terminal for Mac. A real shell, tabs, and shortcuts—without the intimidation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="site.css" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#" aria-label="Espresso Terminal">
+          <img
+            class="brand__mark"
+            src="images/espresso-mark.png"
+            width="32"
+            height="32"
+            alt=""
+            decoding="async"
+          />
+          <span class="wordmark-text">
+            <span class="wordmark-text__espresso">Espresso</span>
+            <span class="wordmark-text__terminal">Terminal</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#download">Download</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__intro">
+          <h1 class="hero__headline">Terminal, without the intimidation.</h1>
+          <p class="hero__sub">
+            Native Mac app. Real shell, tabs, plain-language shortcuts.
+          </p>
+          <a
+            class="btn btn--primary"
+            href="releases/espresso-mac.dmg"
+            download="espresso-mac.dmg"
+            >Download for Mac</a
+          >
+        </div>
+
+        <div class="hero-preview" id="preview">
+          <div
+            class="hero-preview__tabs"
+            role="tablist"
+            aria-label="Interface preview"
+          >
+            <button
+              type="button"
+              class="hero-preview__tab"
+              role="tab"
+              id="tab-dark"
+              aria-selected="true"
+              aria-controls="panel-dark"
+              data-panel="dark"
+            >
+              Dark version
+            </button>
+            <button
+              type="button"
+              class="hero-preview__tab"
+              role="tab"
+              id="tab-light"
+              aria-selected="false"
+              aria-controls="panel-light"
+              data-panel="light"
+            >
+              Light version
+            </button>
+          </div>
+          <div class="hero-preview__frame">
+            <div
+              class="hero-preview__panel"
+              id="panel-dark"
+              role="tabpanel"
+              aria-labelledby="tab-dark"
+              data-panel="dark"
+            >
+              <img
+                class="hero-preview__img"
+                src="images/hero-dark.png"
+                width="1024"
+                height="792"
+                alt="Espresso Terminal in dark mode."
+              />
+            </div>
+            <div
+              class="hero-preview__panel hero-preview__panel--hidden"
+              id="panel-light"
+              role="tabpanel"
+              aria-labelledby="tab-light"
+              data-panel="light"
+              hidden
+            >
+              <img
+                class="hero-preview__img"
+                src="images/hero-light.png"
+                width="1024"
+                height="792"
+                alt="Espresso Terminal in light mode."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bento" aria-labelledby="bento-heading">
+        <div class="bento__intro">
+          <p class="bento__eyebrow">Details</p>
+          <h2 id="bento-heading" class="bento__title">
+            Built for everyday Mac use.
+          </h2>
+        </div>
+        <div class="bento__grid">
+          <article class="bento__card bento__card--span-4">
+            <h3 class="bento__card-title">Real shell</h3>
+            <p class="bento__card-text">
+              zsh on your machine—local, fast, and familiar.
+            </p>
+          </article>
+          <article class="bento__card bento__card--span-4">
+            <h3 class="bento__card-title">Tabs</h3>
+            <p class="bento__card-text">
+              Several sessions in one window. Open, close, switch like a
+              browser.
+            </p>
+          </article>
+          <article class="bento__card bento__card--span-4">
+            <h3 class="bento__card-title">Shortcuts</h3>
+            <p class="bento__card-text">
+              Plain-language actions paste the command—learn at your pace.
+            </p>
+          </article>
+          <article class="bento__card bento__card--dock bento__card--span-7">
+            <div class="bento__dock-copy">
+              <h3 class="bento__card-title">On your Dock</h3>
+              <p class="bento__card-text bento__card-text--dim">
+                Native Mac app—keep it next to the tools you already use.
+              </p>
+            </div>
+            <div class="bento__dock-frame">
+              <img
+                class="bento__dock-img"
+                src="images/bento-dock.png"
+                width="514"
+                height="314"
+                alt="Espresso Terminal in the macOS Dock, next to Arc and Trash."
+              />
+            </div>
+          </article>
+          <article class="bento__card bento__card--span-5 bento__card--accent">
+            <h3 class="bento__card-title">System look &amp; feel</h3>
+            <p class="bento__card-text">
+              Light and dark appearances follow macOS. No webview cosplay.
+            </p>
+          </article>
+          <article class="bento__card bento__card--span-12 bento__card--cta" id="download">
+            <div class="bento__cta-inner">
+              <div class="bento__cta-copy">
+                <h3 class="bento__card-title bento__cta-title">Download</h3>
+                <p class="bento__card-text bento__card-text--dim">
+                  macOS 11+ · Drag the app to Applications. This build is not
+                  Apple-notarized yet, so you may see a security notice. To open:
+                  <strong>Control-click</strong> the app → <strong>Open</strong>
+                  → Open again, or open
+                  <strong>System Settings → Privacy &amp; Security</strong> and
+                  choose <strong>Open Anyway</strong> under the blocked-app
+                  message.
+                </p>
+                <p class="bento__card-text bento__card-text--dim bento__card-text--link">
+                  <a
+                    class="bento__inline-link"
+                    href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mchlp4910064/mac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Apple: Open an app from an unidentified developer</a
+                  >
+                </p>
+              </div>
+              <a
+                class="btn btn--secondary bento__cta-btn"
+                href="releases/espresso-mac.dmg"
+                download="espresso-mac.dmg"
+                >Download .dmg</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand" aria-hidden="true">
+          <img
+            class="brand__mark brand__mark--footer"
+            src="images/espresso-mark.png"
+            width="32"
+            height="32"
+            alt=""
+            decoding="async"
+          />
+          <span class="wordmark-text wordmark-text--footer">
+            <span class="wordmark-text__espresso">Espresso</span>
+            <span class="wordmark-text__terminal">Terminal</span>
+          </span>
+        </div>
+        <p class="site-footer__credit">
+          <a
+            class="site-footer__credit-link"
+            href="https://www.linkedin.com/in/jacobmolenick"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Created by Jacob Olenick</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var tabs = document.querySelectorAll('.hero-preview__tab');
+        var panels = document.querySelectorAll('.hero-preview__panel');
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            var id = tab.getAttribute('data-panel');
+            tabs.forEach(function (t) {
+              var on = t === tab;
+              t.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            panels.forEach(function (p) {
+              var match = p.getAttribute('data-panel') === id;
+              p.classList.toggle('hero-preview__panel--hidden', !match);
+              p.hidden = !match;
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
