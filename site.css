@@ -183,35 +183,6 @@ body {
   line-height: 1.45;
 }
 
-.hero__ai {
-  margin: 0 0 1.25rem;
-  padding: 0.65rem 0.85rem;
-  border-radius: 12px;
-  border: 1px solid var(--line-strong);
-  background: color-mix(in srgb, var(--text) 3%, var(--surface));
-}
-
-.hero__ai-label {
-  margin: 0 0 0.35rem;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.hero__ai-text {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.45;
-  color: var(--text-dim);
-}
-
-.hero__ai-text strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
 .hero__price {
   margin: 0 0 1rem;
   display: flex;
