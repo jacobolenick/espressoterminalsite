@@ -37,7 +37,7 @@
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary">
-          <a href="#pricing">Buy</a>
+          <a href="#download">Download</a>
         </nav>
       </div>
     </header>
@@ -52,23 +52,17 @@
             commands.
           </p>
           <div id="pricing" class="hero__price">
-            <span class="hero__price-amount">$4.99</span>
-            <span class="hero__price-note">one-time · pay securely with Stripe</span>
+            <span class="hero__price-amount">Free</span>
+            <span class="hero__price-note">no account required</span>
           </div>
           <div class="hero__actions">
             <a
               class="btn btn--primary"
-              data-stripe-checkout
-              href="https://buy.stripe.com/00waEWgrl0plfdZdHW6wE03"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Download for Your Mac</a
+              href="releases/espresso-mac.dmg"
+              download="EspressoTerminal-mac.dmg"
+              >Download for Mac</a
             >
           </div>
-          <p class="hero__purchase-hint">
-            After payment, Stripe sends you to the download page to grab the Mac
-            .dmg—no separate download button here.
-          </p>
         </div>
 
         <div class="hero-visual" id="preview">
@@ -357,9 +351,7 @@
                   <h3 class="bento__card-title bento__cta-title">Get the app</h3>
                 </div>
                 <p class="bento__card-text bento__card-text--dim">
-                  <span class="bento__price-tag">$4.99</span> one-time via
-                  Stripe. After checkout you’re sent to the download page to
-                  grab the Mac .dmg. macOS 11+ · Drag the app to
+                  Free. macOS 11+ · Drag the app to
                   <strong>Applications</strong>.
                   Apple may say it can’t check the app for malware—that’s
                   <strong>Gatekeeper</strong> when a download isn’t
@@ -400,11 +392,9 @@
               <div class="bento__cta-actions">
                 <a
                   class="btn btn--primary bento__cta-btn"
-                  data-stripe-checkout
-                  href="https://buy.stripe.com/00waEWgrl0plfdZdHW6wE03"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Download for Your Mac</a
+                  href="releases/espresso-mac.dmg"
+                  download="EspressoTerminal-mac.dmg"
+                  >Download for Mac</a
                 >
               </div>
             </div>
@@ -441,8 +431,6 @@
       </div>
     </footer>
 
-    <script src="stripe-config.js"></script>
-    <script src="stripe-checkout.js"></script>
     <script>
       (function () {
         var tabs = document.querySelectorAll('.hero-preview__tab');
