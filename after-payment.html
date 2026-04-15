@@ -47,8 +47,7 @@
         <a
           class="btn btn--primary download-btn"
           id="manual-dl"
-          href="releases/espresso-mac.dmg"
-          download="EspressoTerminal-mac.dmg"
+          href="https://jacobolenick1.gumroad.com/l/iqaoow"
           >Download Espresso Terminal (.dmg)</a
         >
         <p class="download-foot">
@@ -60,10 +59,10 @@
     <script src="site-paths.js"></script>
     <script>
       (function () {
-        var dmgUrl = window.siteResolveUrl('releases/espresso-mac.dmg');
+        var gumroadUrl = 'https://jacobolenick1.gumroad.com/l/iqaoow';
         var manual = document.getElementById('manual-dl');
-        if (manual) manual.href = dmgUrl;
-        window.location.replace(dmgUrl);
+        if (manual) manual.href = gumroadUrl;
+        window.location.replace(gumroadUrl);
       })();
     </script>
   </body>
