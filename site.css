@@ -654,6 +654,53 @@ button.btn:disabled {
   }
 }
 
+.bento__card--vibe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .bento__card--vibe {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .bento__vibe-copy {
+    flex: 0 0 36%;
+  }
+
+  .bento__vibe-frame {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.bento__vibe-frame {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: #0d0d0d;
+  line-height: 0;
+}
+
+.bento__vibe-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.bento__inline-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--text) 7%, transparent);
+  color: var(--text);
+}
+
 .bento__card-text--link {
   margin-top: 0.65rem;
 }
